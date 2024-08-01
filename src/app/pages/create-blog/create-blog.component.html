@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Form</title>
+    <link rel="stylesheet" href="./create-blog.component.css">
+    
+</head>
+<body>
+    <div class="form-container">
+        <form [formGroup]="postform">
+          <label for="name">Name:</label>
+          <input id="name" formControlName="name" type="text" required />
+
+          <label for="img">Image url:</label>
+          <input id="img" formControlName="img" type="text" required />
+      
+          <!-- <label for="image">Upload Image:</label>
+          <input id="image" type="file" (change)="onFileChange($event)" accept="image/*" required /> -->
+      
+          <label for="body">Message:</label>
+          <textarea id="body" formControlName="body" rows="4" required></textarea>
+      
+          <button type="submit" style="float: right;" (click)="postBlog()">Submit</button>
+        </form>
+      </div>
+
+</body>
+</html>

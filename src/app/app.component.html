@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+    <link rel="stylesheet" href="./app.component.css">
+    <script>
+      document.getElementById("blogs").addEventListener("click", function() {
+        alert("Create a New Blog clicked!");
+      });
+    
+    document.getElementById("like").addEventListener("click", function() {
+        alert("Like clicked!");
+      });
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">My Blog</div>
+        <ul class="nav-links">
+            <li><button id="blogs" class="nav-button" routerLink="/create-blog">Create a New Blog</button></li>
+            <li><button id="like" class="nav-button">Like</button></li>
+        </ul>
+    </nav>
+
+    <router-outlet></router-outlet>
+</body>
+</html>
