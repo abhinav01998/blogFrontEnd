@@ -14,4 +14,9 @@ export class PostServiceService {
   createNewBlog(data:any): Observable<any> { 
     return this.http.post(HOME_URL + `api/blogs`, data);
   }
+
+  getAllBlogs(): Observable<any> { 
+    return this.http.get(HOME_URL + `api/blogs`);
+  }
+
 }
