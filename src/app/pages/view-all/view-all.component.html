@@ -1,7 +1,7 @@
 <div class="card-container" *ngFor="let item of allBlogs">
     <mat-card>
         <mat-card-header>
-            <div mar-card-avatar class="header-image"></div>
+            <div mat-card-avatar class="header-image"></div>
             <mat-card-title>{{ item.name }}</mat-card-title>
             <mat-card-subtitle>Posted on: {{ item.date | date:'medium' }}</mat-card-subtitle>
         </mat-card-header>
@@ -19,11 +19,11 @@
 
         <hr>
         <mat-card-actions>
-            <button mat-raised-button color="primary">{{ item.likes }} <mat-icon>favourite</mat-icon></button>
+            <button mat-raised-button color="primary"> {{ item.likes }} <mat-icon>favorite</mat-icon></button>
             <button mat-raised-button color="primary" style="margin-left: 10px;">{{ item.views }} 
                 <mat-icon>remove_red_eye</mat-icon>
             </button>
-            <button mat-raised-button color="primary" style="margin-left: 10px;"> View Post </button>
+            <button mat-raised-button color="primary" style="margin-left: 10px;" routerLink="/open-blog/{{item.id}}"> Read Blog </button>
         </mat-card-actions>
     </mat-card>
 </div>

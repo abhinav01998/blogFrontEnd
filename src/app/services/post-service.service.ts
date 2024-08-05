@@ -19,4 +19,8 @@ export class PostServiceService {
     return this.http.get(HOME_URL + `api/blogs`);
   }
 
+  readBlog(blogId:number): Observable<any> { 
+    return this.http.get(HOME_URL + `api/blogs/${blogId}`);
+  }
+
 }
